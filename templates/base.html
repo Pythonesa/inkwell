@@ -14,6 +14,7 @@
         .text-shadow { color: #6c6c6b; }
         .text-highlight { color: #fcf2e3; }
     </style>
+    {% load static %}
 </head>
 <body class="bg-dark-background text-primary">
     <nav class="bg-light-background container mx-auto p-4 text-shadow my-0.5 md:flex md:flex-row md:justify-between md:items-center">
@@ -23,13 +24,13 @@
             </div>
         </a>
         <div class="font-bold">
-            <ul class="flex gap-2">
+            <ul class="flex flex-wrap gap-2">
                 <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Galería</a></li>|
                 <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Agendar Cita</a></li>
             </ul>
         </div>
         <div class="font-bold">
-            <ul class="flex gap-2">
+            <ul class="flex flex-wrap gap-2">
                 <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Iniciar Sesión</a></li>|
                 <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Registrarse</a></li>
             </ul>
@@ -38,6 +39,35 @@
     <main class="bg-light-background container mx-auto p-4">
         {% block content %}{% endblock %}
     </main>
-    <footer class="bg-light-background container mx-auto p-4 text-shadow my-0.5">footer</footer>
+    <footer class="bg-light-background container mx-auto p-4 text-shadow my-0.5 flex flex-col items-center">
+        <div id="social">
+            <ul class="flex gap-3 flex-wrap">
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/facebook.svg' %}" alt="Facebook" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/instagram.svg' %}" alt="Instagram" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/x.svg' %}" alt="X" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/pinterest.svg' %}" alt="Pinterest" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/telegram.svg' %}" alt="Telegram" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/whatsapp.svg' %}" alt="Whatsapp" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/email.svg' %}" alt="Email" class="w-6 h-6"> @inkwell
+                </a></li>
+            </ul>
+        </div>
+        <div id="copyright">
+            <p>Copyright © 2024 Inkwell. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
