@@ -1,7 +1,18 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
-<h1>Home</h1>
+<h1 class="text-5xl shojumaru-regular text-center">Arte en tu piel</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-evenly mt-8">
+    <div class="col-span-1 flex items-center">
+        <img src="{% static 'assets/home.jpg' %}" alt="Inkwell" class="w-full border-2 border-black shadow-md shadow-black">
+    </div>
+    <div class="col-span-1 text-center flex items-center">
+        <div>
+            <p class="text-left text-xl">Bienvenidos a Inkwell, el estudio de tatuajes más creativo y único de la ciudad. Nuestra misión es transformar tu cuerpo en un arte vivo y único, donde cada tatuaje sea una pieza de arte única y útil. Nuestra escuela de tatuajes cuenta con los mejores profesionales del mundo, capaces de crear tatuajes que se mezclen con tu estilo y personalidad únicas.</p>
+            <button class="btn border-2 border-black shadow-md shadow-black p-2 mt-8 text-2xl hover:transition-all hover:duration-300 hover:scale-105">Agendate ahora</button>
+        </div>
+        </div>
+</div>
 
 {% endblock %}

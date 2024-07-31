@@ -6,6 +6,8 @@
     <title>Inkwell</title>
     <!-- NO usar CDN de Tailwind en producción -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- GOOGLE FONT -->
+    <style>@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');</style>
     <!-- QUITAR ESTE STYLE CUANDO SE USE CLI DE TAILWIND, los colores ya están en el tailwind.config.js -->
     <style>
         .bg-dark-background { background-color: #1f1f1f; }
@@ -13,6 +15,11 @@
         .text-primary { color: #212121; }
         .text-shadow { color: #6c6c6b; }
         .text-highlight { color: #fcf2e3; }
+        .shojumaru-regular {
+            font-family: "Shojumaru", system-ui;
+            font-weight: 400;
+            font-style: normal;
+        }
     </style>
     {% load static %}
 </head>
