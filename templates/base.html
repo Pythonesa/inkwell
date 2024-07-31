@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inkwell</title>
+    <!-- NO usar CDN de Tailwind en producción -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- QUITAR ESTE STYLE CUANDO SE USE CLI DE TAILWIND, los colores ya están en el tailwind.config.js -->
+    <style>
+        .bg-dark-background { background-color: #1f1f1f; }
+        .bg-light-background { background-color: #fff6e5; }
+        .text-primary { color: #212121; }
+        .text-shadow { color: #6c6c6b; }
+        .text-highlight { color: #fcf2e3; }
+    </style>
+    {% load static %}
+</head>
+<body class="bg-dark-background text-primary">
+    <nav class="bg-light-background container mx-auto p-4 text-shadow my-0.5 md:flex md:flex-row md:justify-between md:items-center">
+        <a href="/">
+            <div class="text-xl font-bold text-center border-2 border-black px-2 py-1 rounded-full">
+                <span>🖤Inkwell</span>
+            </div>
+        </a>
+        <div class="font-bold">
+            <ul class="flex flex-wrap gap-2">
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Galería</a></li>|
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Agendar Cita</a></li>
+            </ul>
+        </div>
+        <div class="font-bold">
+            <ul class="flex flex-wrap gap-2">
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Iniciar Sesión</a></li>|
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Registrarse</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="bg-light-background container mx-auto p-4">
+        {% block content %}{% endblock %}
+    </main>
+    <footer class="bg-light-background container mx-auto p-4 text-shadow my-0.5 flex flex-col items-center">
+        <div id="social">
+            <ul class="flex gap-3 flex-wrap">
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/facebook.svg' %}" alt="Facebook" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/instagram.svg' %}" alt="Instagram" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/x.svg' %}" alt="X" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/pinterest.svg' %}" alt="Pinterest" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/telegram.svg' %}" alt="Telegram" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/whatsapp.svg' %}" alt="Whatsapp" class="w-6 h-6"> @inkwell
+                </a></li>
+                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4 flex flex-col items-center">
+                    <img src="{% static 'assets/email.svg' %}" alt="Email" class="w-6 h-6"> @inkwell
+                </a></li>
+            </ul>
+        </div>
+        <div id="copyright">
+            <p>Copyright © 2024 Inkwell. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
