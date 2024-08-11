@@ -38,7 +38,13 @@
         </div>
         <div class="font-bold">
             <ul class="flex flex-wrap gap-2">
-                {% if user.is_authenticated %}Usuario logueado
+                {% if user.is_authenticated %}
+                <li>
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Cerrar Sesión</button>
+                    </form>
+                </li>
                 {% else %}
                 <li><a href="{% url 'login' %}" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Iniciar Sesión</a></li>
                 {% endif %}
