@@ -47,10 +47,9 @@
                 </li>
                 {% else %}
                 <li><a href="{% url 'login' %}" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Iniciar Sesión</a></li>
-                {% endif %}
-
                 |
-                <li><a href="#" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Registrarse</a></li>
+                <li><a href="{% url 'signup' %}" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Registrarse</a></li>
+                {% endif %}
             </ul>
         </div>
     </nav>
