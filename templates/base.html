@@ -39,6 +39,8 @@
         <div class="font-bold">
             <ul class="flex flex-wrap gap-2">
                 {% if user.is_authenticated %}
+                <li><a href="{% url 'profile' %}" class="hover:transition-all hover:duration-300 hover:underline hover:underline-offset-4">Hola, {{ user.username }}</a></li>
+                |
                 <li>
                     <form action="{% url 'logout' %}" method="post">
                         {% csrf_token %}
