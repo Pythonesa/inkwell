@@ -18,6 +18,12 @@
 - SQLite (desarrollo)
 - PostgreSQL (producción)
 
+## Test suite
+
+La suite de pruebas de éste proyecto se desarrolla con Playwright y se puede encontrar en el [repositorio tests_inkwell](https://github.com/Pythonesa/tests_inkwell).
+
+Las técnicas y casos de prueba que se utilizan como insumos se encuentran en la sección [Técnicas de Prueba en la wiki de éste proyecto](https://github.com/Pythonesa/inkwell/wiki/T%C3%A9cnicas-de-Prueba).
+
 ## Licencia
 
 Este proyecto está bajo la [licencia MIT](LICENSE.md).
